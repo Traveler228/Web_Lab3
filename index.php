@@ -146,6 +146,7 @@ $array = $sth -> fetchALL(PDO::FETCH_ASSOC);
 
 
 
+
 <footer id = "footer">
 		<div class="container">
 			<div class ="down">
