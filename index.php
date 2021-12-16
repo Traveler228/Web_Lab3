@@ -107,55 +107,15 @@
 	</section>
 
 
-<?php
-require "functions.php";
-global $dbh;
-$sth = $dbh -> prepare("SELECT * FROM user");
-$sth->execute();
-$array = $sth -> fetchALL(PDO::FETCH_ASSOC);
-?>
-<table>
-<tr>
-  <th>id</th>
-  <th>login</th>
-  <th>password</th>
-  <th>phone</th>
-  <th>email</th>
-</tr>
-  <?php 
-  for ($i = 0; $i < count($array); $i++) {
-    $id = $array[$i]['id_user'];
-    $login = $array[$i]['login']  ;
-    $password = $array[$i]['password']  ;
-    $phone = $array[$i]['phone']  ;
-    $email = $array[$i]['email'] ;
-    print('<tr>
-    <td>'.$id.'</td>
-    <td>'.$login.'</td>
-    <td>'.$password.'</td>
-    <td>'.$phone.'</td>
-    <td>'.$email.'</td>
-    </tr>');
-}
-  ?>
-</table>
-
-
-
-
-
-
-
-
 <footer id = "footer">
 		<div class="container">
 			<div class ="down">
-				<img src="img/Logo.png" alt="logotype" class="logotype">
+				<img class="imge" src="img/Logo.png" alt="logotype" class="logotype">
 				<div class="copyright">
-					<img src="img/copyright.svg" alt="copyright">Screenshot 2001
+					<img class="imag" src="img/copyright.svg" alt="copyright">Screenshot 2001
 				</div>
 				<div class="about">
-				<h4>РАЗРАБОТЧИКИ</h4> <h5>Язовский Роман r.yazovskii@mail.ru</h5> <h5>Киреев Илия kiruh1@yandex.ru</h5> 
+				<h4>РАЗРАБОТЧИКИ</h4> <h5>Язовский Роман <a href="mailto:r.yazovskii@mail.ru">r.yazovskii@mail.ru</a></h5> <h5>Киреев Илия <a href="mailto:kiruh1@yandex.ru">kiruh1@yandex.ru</a></h5> 
 				</div>
 			</div>
 			
